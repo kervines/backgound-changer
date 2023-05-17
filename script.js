@@ -1,25 +1,10 @@
 const colorBody = document.body;
-const buttonChance = document.querySelector('button');
+const buttonChange = document.querySelector('button');
 
-const colorArray = [
-  '162D3D',
-  '107890',
-  'FEEFC3',
-  'E27A3F',
-  'B0262D',
-  'C79730',
-  '4F2919',
-  '932336',
-];
+let numRand = () => {
+  return Math.floor(Math.random() * 256);
+};
 
-let i = 0;
-buttonChance.addEventListener('click', () => {
-  if (i < colorArray.length) {
-    colorBody.style.backgroundColor = `#${colorArray[i]}`;
-    console.log(colorArray[i]);
-    i++;
-  } else {
-    colorBody.style.backgroundColor = '';
-    i = 0;
-  }
+buttonChange.addEventListener('click', () => {
+  colorBody.style.background = `rgb(${numRand()},${numRand()},${numRand()})`;
 });
