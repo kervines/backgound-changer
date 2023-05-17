@@ -1,5 +1,5 @@
 const colorBody = document.body;
-const buttonChance = document.getElementById('change');
+const buttonChance = document.querySelector('button');
 
 const colorArray = [
   '162D3D',
